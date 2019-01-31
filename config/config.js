@@ -9,7 +9,13 @@ const envVarsSchema = Joi.object({
     .allow(['development', 'production', 'test', 'provision'])
     .default('development'),
   PORT: Joi.number()
-    .default(4040)
+    .default(4040),
+  DB_CLIENT: Joi.string().required(),
+  DB_HOST: Joi.string().required(),
+  DB_USER: Joi.string().required(),
+  DB_PASSWORD: Joi.string().required(),
+  DB_NAME: Joi.string().required(),
+  DB_PORT: Joi.number().required()
 }).unknown()
   .required();
 
@@ -20,7 +26,13 @@ if (error) {
 
 const config = {
   env: envVars.NODE_ENV,
-  port: envVars.PORT
+  port: envVars.PORT,
+  dbClient: envVars.DB_CLIENT,
+  dbHost: envVars.DB_HOST,
+  dbUser: envVars.DB_USER,
+  dbPassword: envVars.DB_PASSWORD,
+  dbName: envVars.DB_NAME,
+  dbPort: envVars.DB_PORT
 };
 
 module.exports = config;
