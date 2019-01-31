@@ -30,7 +30,10 @@
     ],
     "no-underscore-dangle": [
       0
-    ]
+    ],
+    "prefer-const": "off",
+    "one-var": "off",
+    "one-var-declaration-per-line": "off"
   },
   "env": {
     "node": true,

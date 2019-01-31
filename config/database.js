@@ -1,6 +1,6 @@
 const config = require('./config');
 
-export default {
+module.exports = {
   client: config.dbClient,
   connection: {
     host: config.dbHost || '127.0.0.1',

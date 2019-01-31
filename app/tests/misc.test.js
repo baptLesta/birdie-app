@@ -1,5 +1,5 @@
-const request = require('supertest-as-promised');
-const httpStatus = require('http-status');
+const request = require('supertest');
+const httpStatus = require('http-status-codes');
 const chai = require('chai'); // eslint-disable-line import/newline-after-import
 const expect = chai.expect;
 const app = require('../../index');
