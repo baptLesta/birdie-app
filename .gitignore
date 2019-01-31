@@ -48,8 +48,4 @@ node_modules
 .node_repl_history
 
 # .env
-.env
-
-# Key
-privateKey.pem
-publicKey.pem
+./.env
